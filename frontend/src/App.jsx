@@ -263,8 +263,9 @@ const teamMembers = [
     color: "from-cyan-400 to-blue-600",
     bio: "Spearheads distributed system architecture, enterprise cloud engineering, and automated deployment pipelines. Specializes in building resilient backend topologies that scale reliably under mission-critical enterprise loads.",
     skills: ["AWS Cloud Architecture", "Kubernetes & Docker", "Spring Boot & Java", "React 19 & TypeScript", "CI/CD & DevOps Automation"],
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
+    portfolio: "https://venkatdupaguntlaprofile.vercel.app/",
+    linkedin: "https://www.linkedin.com/in/venkat-dupaguntla-7539v/",
+    github: "https://github.com/venkat30141/",
   },
   {
     name: "T Rushmitha",
@@ -276,8 +277,8 @@ const teamMembers = [
     color: "from-violet-400 to-fuchsia-600",
     bio: "Bridges enterprise business requirements with technical architecture. Drives system design integrity, collaborative technical governance, and agile delivery standards to ensure software directly fuels measurable business value.",
     skills: ["System Architecture Design", "Enterprise Solution Strategy", "API Design & Integration", "Technical Team Collaboration", "Agile Execution"],
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
+    linkedin: "https://www.linkedin.com/in/rushmitha-tamma-a20b46368/",
+    github: "https://github.com/Rushmitha600",
   },
   {
     name: "V Satish Teja",
@@ -289,8 +290,36 @@ const teamMembers = [
     color: "from-sky-400 to-indigo-600",
     bio: "Champions cutting-edge frontend ecosystems, agentic AI integrations, and high-performance asynchronous application pipelines. Focuses on developer velocity, responsive UI architecture, and autonomous intelligence systems.",
     skills: ["React & Next-gen Frontend", "AI & Model Context Protocol", "FastAPI & Python", "Modern UI/UX Design Systems", "Database Optimization"],
-    linkedin: "https://linkedin.com",
-    github: "https://github.com",
+    linkedin: "https://www.linkedin.com/in/vemulasatishteja",
+    github: "https://github.com/SatishTejaVemula",
+  },
+];
+
+const completeProjectRepositories = [
+  {
+    name: "Loanera Backend",
+    description: "Loanera backend repository.",
+    url: "https://github.com/venkat30141/loanera-backend",
+  },
+  {
+    name: "Loanera Frontend",
+    description: "Loanera frontend repository.",
+    url: "https://github.com/venkat30141/loanera-frontend",
+  },
+  {
+    name: "GigShield Frontend",
+    description: "GigShield frontend repository.",
+    url: "https://github.com/venkat30141/gigshieldfrontend",
+  },
+  {
+    name: "GigShield Backend",
+    description: "GigShield backend repository.",
+    url: "https://github.com/venkat30141/backend-gigshield",
+  },
+  {
+    name: "Guidewire Bytebrains",
+    description: "Guidewire Bytebrains repository.",
+    url: "https://github.com/venkat30141/guidewire_bytebrains",
   },
 ];
 
@@ -673,6 +702,7 @@ Sent via Nexus Appsmiths Enterprise Portal`;
   const navItems = [
     { label: "Solutions", href: "#services" },
     { label: "Case Studies", href: "#projects" },
+    { label: "Projects", href: "#featured-projects" },
     { label: "Architecture", href: "#architecture" },
     { label: "Leadership", href: "#team" },
     { label: "Tech Ecosystem", href: "#technology" },
@@ -765,11 +795,11 @@ Sent via Nexus Appsmiths Enterprise Portal`;
             : "border-slate-200/80 bg-white/85 shadow-sm"
         }`}
       >
-        <div className="section-wrap flex h-20 items-center justify-between">
+        <div className="section-wrap flex h-20 items-center justify-between gap-4">
           <Logo isDark={isDark} />
 
           <nav
-            className={`hidden items-center gap-1 lg:flex p-1.5 rounded-full border transition-colors ${
+            className={`hidden shrink-0 items-center gap-0 xl:flex p-1 rounded-full border transition-colors ${
               isDark
                 ? "bg-[#0b1022]/70 border-white/[0.08]"
                 : "bg-slate-100/80 border-slate-200 shadow-inner"
@@ -779,7 +809,7 @@ Sent via Nexus Appsmiths Enterprise Portal`;
               <a
                 key={item.href}
                 href={item.href}
-                className={`px-4 py-2 text-xs font-semibold rounded-full transition-all duration-200 ${
+                className={`whitespace-nowrap px-2 py-2 text-[11px] font-semibold rounded-full transition-all duration-200 ${
                   isDark
                     ? "text-slate-300 hover:text-white hover:bg-white/[0.07]"
                     : "text-slate-600 hover:text-slate-900 hover:bg-white"
@@ -790,7 +820,7 @@ Sent via Nexus Appsmiths Enterprise Portal`;
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-2">
             {/* Animated Dark / Light Mode Toggle Button */}
             <motion.button
               type="button"
@@ -829,10 +859,10 @@ Sent via Nexus Appsmiths Enterprise Portal`;
             {/* Direct Email Action Button */}
             <a
               href="#contact"
-              className="relative group hidden sm:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 p-[1px] font-semibold text-xs tracking-wide shadow-lg shadow-sky-500/15"
+              className="relative group hidden shrink-0 whitespace-nowrap sm:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 p-[1px] font-semibold text-xs tracking-wide shadow-lg shadow-sky-500/15"
             >
               <span
-                className={`flex items-center gap-2 rounded-full px-4 py-2.5 transition-all duration-300 ${
+                className={`flex items-center gap-2 whitespace-nowrap rounded-full px-3 py-2.5 transition-all duration-300 ${
                   isDark
                     ? "bg-[#090e1f] text-slate-100 group-hover:bg-opacity-80 group-hover:text-sky-200"
                     : "bg-white text-slate-900 group-hover:bg-slate-50 group-hover:text-sky-600"
@@ -847,7 +877,7 @@ Sent via Nexus Appsmiths Enterprise Portal`;
             <button
               type="button"
               onClick={() => setMobileMenuOpen((open) => !open)}
-              className={`flex h-10 w-10 items-center justify-center rounded-xl border lg:hidden transition-colors ${
+              className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border xl:hidden transition-colors ${
                 isDark
                   ? "border-white/10 bg-white/[0.04] text-slate-200"
                   : "border-slate-200 bg-white text-slate-700 shadow-sm"
@@ -1692,6 +1722,108 @@ Sent via Nexus Appsmiths Enterprise Portal`;
           </div>
         </section>
 
+        {/* --- Featured Project Link --- */}
+        <section
+          id="featured-projects"
+          className={`scroll-mt-20 border-b py-20 transition-colors duration-300 ${
+            isDark ? "border-white/10 bg-[#070b18]" : "border-slate-200 bg-slate-100/50"
+          }`}
+        >
+          <div className="section-wrap">
+            <SectionHeading
+              isDark={isDark}
+              eyebrow="Featured Project"
+              description="Explore our project forms and related resources."
+            >
+              Our <span className="gradient-text">Projects.</span>
+            </SectionHeading>
+
+            <motion.a
+              href="https://venkat30141.github.io/forms/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={revealVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.15 }}
+              className={`glass-card group mt-10 flex flex-col gap-5 rounded-3xl border p-7 transition-all sm:flex-row sm:items-center sm:justify-between ${
+                isDark
+                  ? "border-white/10 bg-[#0a0f21] hover:border-sky-400/40"
+                  : "border-slate-200 bg-white hover:border-sky-500 shadow-md"
+              }`}
+            >
+              <div>
+                <h3 className={`text-xl font-bold tracking-tight transition-colors ${
+                  isDark ? "text-white group-hover:text-sky-200" : "text-slate-900 group-hover:text-sky-600"
+                }`}>
+                  Project Forms
+                </h3>
+                <p className={`mt-2 text-sm leading-relaxed ${isDark ? "text-slate-400" : "text-slate-600"}`}>
+                  Explore our project forms and related resources.
+                </p>
+              </div>
+              <span className={`inline-flex shrink-0 items-center justify-center gap-2 rounded-xl border px-5 py-3 text-xs font-bold transition-all ${
+                isDark
+                  ? "border-sky-400/30 bg-sky-400/[0.08] text-sky-200 group-hover:bg-sky-400/20 group-hover:border-sky-400/60"
+                  : "border-sky-300 bg-sky-50 text-sky-700 group-hover:bg-sky-100"
+              }`}>
+                <span>Open Project Forms</span>
+                <ArrowUpRight size={15} />
+              </span>
+            </motion.a>
+          </div>
+        </section>
+
+        {/* --- Complete Project Repositories --- */}
+        <section id="repositories" className="section-wrap scroll-mt-24 py-20">
+          <SectionHeading
+            isDark={isDark}
+            eyebrow="Source Code"
+            description="Browse the complete project repositories on GitHub."
+          >
+            Complete Project <span className="gradient-text">Repositories.</span>
+          </SectionHeading>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {completeProjectRepositories.map((repository) => (
+              <motion.a
+                key={repository.url}
+                href={repository.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={revealVariants}
+                className={`glass-card group flex min-h-44 flex-col justify-between rounded-2xl border p-6 transition-all ${
+                  isDark
+                    ? "border-white/10 bg-[#0a0f21] hover:border-sky-400/40"
+                    : "border-slate-200 bg-white hover:border-sky-500 shadow-md"
+                }`}
+              >
+                <div>
+                  <h3 className={`text-lg font-bold tracking-tight transition-colors ${
+                    isDark ? "text-white group-hover:text-sky-200" : "text-slate-900 group-hover:text-sky-600"
+                  }`}>
+                    {repository.name}
+                  </h3>
+                  <p className={`mt-2 text-sm leading-relaxed ${isDark ? "text-slate-400" : "text-slate-600"}`}>
+                    {repository.description}
+                  </p>
+                </div>
+                <span className="mt-6 inline-flex items-center gap-2 text-xs font-bold text-sky-500">
+                  <GithubIcon />
+                  <span>View GitHub repository</span>
+                  <ArrowUpRight size={14} />
+                </span>
+              </motion.a>
+            ))}
+          </motion.div>
+        </section>
+
         {/* --- Interactive Enterprise Architecture Blueprint --- */}
         <section id="architecture" className="section-wrap scroll-mt-24 py-24">
           <SectionHeading
@@ -1933,6 +2065,24 @@ Sent via Nexus Appsmiths Enterprise Portal`;
                         </span>
                       ))}
                     </div>
+
+                    {member.portfolio && (
+                      <div className="mt-6 flex justify-center">
+                        <a
+                          href={member.portfolio}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-flex items-center justify-center gap-2 rounded-xl border px-4 py-2.5 text-xs font-bold transition-all ${
+                            isDark
+                              ? "border-sky-400/30 bg-sky-400/[0.08] text-sky-200 hover:bg-sky-400/20 hover:border-sky-400/60"
+                              : "border-sky-300 bg-sky-50 text-sky-700 hover:bg-sky-100"
+                          }`}
+                        >
+                          <span>View Portfolio</span>
+                          <ArrowUpRight size={14} />
+                        </a>
+                      </div>
+                    )}
                   </div>
 
                   {/* Social Channels */}
